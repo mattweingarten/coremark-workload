@@ -4,5 +4,7 @@
   "workdir" : "..",
   "host-init" : "build.sh",
   "overlay" : "overlay",
-  "command" : "./coremark.riscv"
+  "files": [["runCoremark.sh", "/"]],
+  "outputs" : ["/cpi/"],
+  "command" : "bash ./runCoremark.sh"
 }
