@@ -12,12 +12,12 @@ cd $BASEDIR/$CM_FOLDER
 
 # run the compile
 echo "Start compilation"
-make PORT_DIR=../riscv64 PORT_CFLAGS=-O1 ITERATIONS=1 compile 
+make PORT_DIR=../riscv64 PORT_CFLAGS=-O1 compile ITERATIONS=10
 mv coremark.riscv  ../../overlay/coremark_O1.riscv
 
 echo "Start compilation"
 make PORT_DIR=../riscv64 PORT_CFLAGS="-O1 \
--fschedule-insns -fschedule-insns2" ITERATIONS=1 compile 
+-fschedule-insns -fschedule-insns2"  compile  ITERATIONS=10
 mv coremark.riscv  ../../overlay/coremark_O1_sched.riscv
 
 

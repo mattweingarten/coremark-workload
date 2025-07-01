@@ -1,3 +1,3 @@
 mkdir -p /cpi
-firesim-start-trigger && ./perf ./coremark.riscv  && firesim-end-trigger
+./perf ./coremark.riscv
 cat /cpi/coremark.riscv.cpi
